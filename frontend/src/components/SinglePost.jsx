@@ -17,20 +17,7 @@ const SinglePost = () => {
           property="og:image"
           content={post?.og_image_url?.url || "fallback_image_url"}
         />
-        <meta property="og:title" content={post.title} />
-        <meta
-          property="og:description"
-          content={post.description || "Fallback description"}
-        />
-        <meta property="og:url" content={window.location.href} />
 
-        {/* Twitter Card Meta Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={post.title} />
-        <meta
-          name="twitter:description"
-          content={post.description || "Fallback description"}
-        />
         <meta
           name="twitter:image"
           content={post?.og_image_url?.url || "fallback_image_url"}
