@@ -1,0 +1,24 @@
+{
+  "name": "og_image_generation",
+  "version": "1.0.0",
+  "description": "this is the backend for the og image generation assignment",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "manish singh bisht",
+  "license": "ISC",
+  "dependencies": {
+    "@upstash/kafka": "^1.3.5",
+    "cloudinary": "^2.4.0",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "express-validator": "^7.1.0",
+    "kafkajs": "^2.2.4",
+    "mongoose": "^8.5.2",
+    "puppeteer": "^22.15.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
