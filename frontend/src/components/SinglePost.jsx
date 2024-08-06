@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import useFetch from "../customHooks/useFetch";
 import redditLogo from "../../public/reddit.png";
+import { Helmet } from "react-helmet-async";
 const SinglePost = () => {
   const { postId } = useParams();
   const { data, loading, error } = useFetch(`posts/${postId}`);
@@ -11,6 +12,22 @@ const SinglePost = () => {
 
   return (
     <div className="border p-4 h-screen w-full">
+      <Helmet>
+        <meta property="og:title" content={post?.title || "Post"} />
+        <meta
+          property="og:description"
+          content={post?.content || "No description available"}
+        />
+        <meta
+          property="og:image"
+          content={post?.og_image_url?.url || "fallback_image_url"}
+        />
+        <meta property="og:type" content="article" />
+        <meta
+          property="og:url"
+          content={`https://yourwebsite.com/posts/${postId}`}
+        />
+      </Helmet>
       {post ? (
         <div className="flex flex-col gap-4">
           <div className="flex gap-2 items-center hover:underline">
