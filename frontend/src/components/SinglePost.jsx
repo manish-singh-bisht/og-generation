@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import useFetch from "../customHooks/useFetch";
 import redditLogo from "../../public/reddit.png";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 const SinglePost = () => {
   const { postId } = useParams();
   const { data, loading, error } = useFetch(`posts/${postId}`);
