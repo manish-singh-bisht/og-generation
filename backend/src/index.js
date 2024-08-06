@@ -19,7 +19,7 @@ cloudinary.config({
   api_secret: API_SECRET,
 });
 
-app.use(cors({ origin: ORIGIN }));
+app.use(cors({ origin: "https://og-generation-eight.vercel.app" }));
 app.use(express.json({ extended: true, limit: "10mb" }));
 app.use(express.urlencoded({ extended: true }));
 
