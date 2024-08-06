@@ -27,8 +27,7 @@ const SinglePost = () => {
         <div className="flex flex-col gap-4">
           {post.og_image_url?.url ? (
             <div>
-              <div className="text-blue-600">url:{post.og_image_url.url}</div>
-
+              <div className="text-blue-600">{post.og_image_url.url}</div>
               <div className="text-red-400">
                 I thought i would show you a preview by sharing in twitter, but
                 this did not turn out well because ssr is needed,crawling issues
