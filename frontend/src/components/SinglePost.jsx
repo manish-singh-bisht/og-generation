@@ -10,7 +10,7 @@ const SinglePost = () => {
   if (error) return <p>{error}</p>;
 
   return (
-    <div className="border p-4 h-screen">
+    <div className="border p-4 h-screen w-full">
       {post ? (
         <div className="flex flex-col gap-4">
           <div className="flex gap-2 items-center hover:underline">
