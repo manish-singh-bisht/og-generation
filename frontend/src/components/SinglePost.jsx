@@ -16,9 +16,9 @@ const SinglePost = () => {
         <meta
           property="og:image"
           content={post?.og_image_url?.url || "fallback_image_url"}
-        /><meta name="twitter:image"  content={post?.og_image_url?.url || "fallback_image_url"}>
-          <meta name="twitter:card" content="post card og generation">
-<meta name="twitter:title" content={post.title}>
+        /><meta name="twitter:image"  content={post?.og_image_url?.url || "fallback_image_url"}/>
+          <meta name="twitter:card" content="post card og generation"/>
+<meta name="twitter:title" content={post.title}/>
 
       </Helmet>
       {post ? (
