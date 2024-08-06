@@ -13,19 +13,9 @@ const SinglePost = () => {
   return (
     <div className="border p-4 h-screen w-full">
       <Helmet>
-        <meta property="og:title" content={post?.title || "Post"} />
-        <meta
-          property="og:description"
-          content={post?.content || "No description available"}
-        />
         <meta
           property="og:image"
           content={post?.og_image_url?.url || "fallback_image_url"}
-        />
-        <meta property="og:type" content="article" />
-        <meta
-          property="og:url"
-          content={`https://yourwebsite.com/posts/${postId}`}
         />
       </Helmet>
       {post ? (
@@ -36,7 +26,7 @@ const SinglePost = () => {
               alt="reddit logo"
               className="h-5 w-5  rounded-full"
             />
-            <span className="text-[0.8s5rem]">Username</span>
+            <span className="text-[0.85rem]">Username</span>
           </div>
 
           <div className="text-2xl font-bold break-words">{post.title}</div>
