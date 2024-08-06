@@ -45,17 +45,7 @@ const SinglePost = () => {
               />
             </div>
           )}
-          {post.og_image_url?.url ? (
-            <div>
-              <img
-                src={post.og_image_url?.url}
-                className="border rounded-lg"
-                alt="og_image"
-              />
-            </div>
-          ) : (
-            <div>wait og image is being processed.</div>
-          )}
+
           <div>Comments.......</div>
         </div>
       ) : (
