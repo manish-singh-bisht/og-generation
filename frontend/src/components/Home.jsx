@@ -15,7 +15,13 @@ const Home = () => {
     }
   }, [data]);
 
-  if (loading) return <p>Loading posts...</p>;
+  if (loading)
+    return (
+      <p>
+        If you are visiting for the first time, it will take near about 50
+        seconds because the backend is hosted on a free tier.
+      </p>
+    );
   if (error) return <p>Error: {error.message}</p>;
 
   return (
