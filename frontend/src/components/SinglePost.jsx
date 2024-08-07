@@ -45,7 +45,7 @@ const SinglePost = () => {
             </div>
           ) : (
             <div>
-              wait og image is being processed.refresh after near 2 seconds.
+              wait og image is being processed.refresh after 2 seconds.
             </div>
           )}
           <div className="flex mt-10 gap-2 items-center hover:underline">
