@@ -27,12 +27,16 @@ const SinglePost = () => {
         <div className="flex flex-col gap-4">
           {post.og_image_url?.url !== null ? (
             <div>
-              <Link
-                to={post.og_image_url.url}
+              <a
+                href={post.og_image_url.url}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:underline text-blue-600"
               >
                 {post.og_image_url.url}
-              </Link>
+
+                {post.og_image_url.url}
+              </a>
               <div className="text-red-400">
                 I thought i would show you a preview by sharing in twitter, but
                 this did not turn out well because ssr is needed,crawling issues
