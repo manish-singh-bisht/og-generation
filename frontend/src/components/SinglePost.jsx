@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import useFetch from "../customHooks/useFetch";
 import redditLogo from "../../public/reddit.png";
 import { Helmet } from "react-helmet";
@@ -25,19 +25,26 @@ const SinglePost = () => {
       </Helmet>
       {post ? (
         <div className="flex flex-col gap-4">
-          {post.og_image_url?.url ? (
+          {post.og_image_url?.url !== null ? (
             <div>
-              <div className="text-blue-600">{post.og_image_url.url}</div>
+              <Link
+                to={post.og_image_url.url}
+                className="hover:underline text-blue-600"
+              >
+                {post.og_image_url.url}
+              </Link>
               <div className="text-red-400">
                 I thought i would show you a preview by sharing in twitter, but
                 this did not turn out well because ssr is needed,crawling issues
-                of twitter,doesnot execute js so doesnt read the tags.
+                of twitter,doesnot execute js so ,doesnt read the tags.
               </div>
             </div>
           ) : (
-            <div>wait og image is being processed.</div>
+            <div>
+              wait og image is being processed.refresh after near 2 seconds.
+            </div>
           )}
-          <div className="flex gap-2 items-center hover:underline">
+          <div className="flex mt-10 gap-2 items-center hover:underline">
             <img
               src={redditLogo}
               alt="reddit logo"
